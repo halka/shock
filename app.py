@@ -10,15 +10,10 @@ load_dotenv(dotenv_path)
 api = responder.API()
 
 
-@api.route('/')
-def hello_world(req, resp):
-    resp.text = "hello"
-
-
 @api.route('/shock')
 def shock(req, resp):
     if req.method == 'get':
-        resp.media = {'Message': 'POST Method Only'}
+        resp.media = {'message': 'POST Method Only'}
     if req.method == 'post':
         requests.get(os.environ.get("SHOCK_URL"))
         resp.media = {'success': True}
