@@ -25,4 +25,4 @@ def test(req, resp):
 
 
 if __name__ == '__main__':
-    api.run()
+    api.run(port=6666)
