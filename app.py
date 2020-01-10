@@ -19,10 +19,5 @@ def shock(req, resp):
         resp.media = {'success': True}
 
 
-@api.route('/test')
-def test(req, resp):
-    print("test_shock")
-
-
 if __name__ == '__main__':
     api.run(port=6666)
